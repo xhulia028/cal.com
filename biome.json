@@ -52,6 +52,7 @@
       "!!public",
       "!!apps/web/public/embed",
       "!!packages/prisma/zod",
+      "!!packages/prisma/generated",
       "!!packages/prisma/enums",
       "!!*.lock",
       "!!*.log",

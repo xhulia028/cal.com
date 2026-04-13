@@ -1,4 +1,9 @@
 name: Build Images
+on:
+  workflow_run:
+    workflows: ["Format Check"]
+    types:
+      - completed
 
 jobs:
   build-calcom:
@@ -25,8 +30,8 @@ jobs:
           file: Dockerfile
           # TODO: Replace both URLs with your domains
           build-args: |
-            NEXT_PUBLIC_WEBAPP_URL=https://cal.starliner.app
-            NEXT_PUBLIC_API_V2_URL=https://api.cal.starliner.app
+            NEXT_PUBLIC_WEBAPP_URL=https://calendar.team0.starliner.app
+            NEXT_PUBLIC_API_V2_URL=https://api.calendar.team0.starliner.app
             NEXT_PUBLIC_LICENSE_CONSENT=agree
           push: true
           tags: ghcr.io/${{ github.repository }}/calcom:latest

@@ -1,5 +1,11 @@
 name: Update Services
 
+on:
+  workflow_run:
+    workflows: ["Build Images"]
+    types:
+      - completed
+
 jobs:
   update:
     if: ${{ github.event.workflow_run.conclusion == 'success' }}

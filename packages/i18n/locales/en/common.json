@@ -1,5 +1,5 @@
 {
-  "apply_to_all": "Apply to all Lessgo",
+  "apply_to_all": "Apply to all Lessgoo",
   "identity_provider": "Identity provider",
   "trial_days_left": "You have $t(day, {\"count\": {{days}} }) left on your pro trial",
   "day_one": "{{count}} day",
